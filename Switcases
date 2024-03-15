@@ -1,0 +1,32 @@
+let paisDeOrigem 
+
+if (paisDeOrigem === "Brasil") {
+    console.log("brasileiro")
+}else if (paisDeOrigem === "EUA"){
+    console.log("estadunidense")
+}else if (paisDeOrigem === "Inglaterra"){
+    console.log("ingles")
+}else if (paisDeOrigem === "Canada"){
+    console.log("canadense")
+}else {
+    console.log("Nacionalidade não encontrada")
+}
+
+let nacionalidade
+switch (nacionalidade) {
+    case "Brasil":
+        console.log("brasileiro")        
+        break
+case "EUA":
+    console.log("estadunidense")
+    break
+    case "Inglaterra":
+        console.log("Ingles")
+        break
+        case "Canada":
+            console.log("canadense")
+            default:
+                console.log("Nacionalidade não encontrada")
+        break;
+}
+
