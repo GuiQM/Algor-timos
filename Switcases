@@ -11,7 +11,7 @@ if (paisDeOrigem === "Brasil") {
 }else {
     console.log("Nacionalidade não encontrada")
 }
-
+--------------------------------------------------
 let nacionalidade
 switch (nacionalidade) {
     case "Brasil":
@@ -29,4 +29,5 @@ case "EUA":
                 console.log("Nacionalidade não encontrada")
         break;
 }
+--------------------------------------------------------------
 
