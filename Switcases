@@ -31,3 +31,20 @@ case "EUA":
 }
 --------------------------------------------------------------
 
+let pokemonInicial
+
+switch (pokemonInicial) {
+    case "Bulbasauro": 
+        console.log("Você escolheu o Bulbasauro como seu pokémon inicial")
+
+        break
+
+        case "Charmander":
+        console.log("Você escolheu Charmander como seu pokémon inicial")
+
+        break
+
+case "Squirtle":
+    Console.log("Você escolheu Squirtle como seu pokémon inicial")
+        break;
+}
