@@ -49,3 +49,36 @@ var palavra1 = "Eleva";
 var palavra2 = "dor";
 var resultado = palavra1+palavra2
 print(resultado)
+
+//--------------------------
+
+var a = 15;
+var b = 5;
+var c = 10;
+var d = 20;
+
+
+if ((a > 10 && a < 20) || (b==5)){
+print("True");
+}else{
+print("False")}
+
+if (((a > 10 && a < 20) || (b==5) || c==10)){
+print("True");
+}else{
+print("False")}
+
+if (((a > 10) || (b==5) || c!=10)){
+print("True");
+}else{
+print("False")}
+
+if (((a > 10) || (b==5)) && (c!=10)){
+    print("True");
+}else{
+print("False")}
+
+if ((((a > 10) || (b==5)) && (c!=10) && (d!=20))){
+print("True");
+}else{
+print("False")}
