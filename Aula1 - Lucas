@@ -1,0 +1,38 @@
+var numero1 = 5;
+var numero2 = 3;
+var resultado;
+
+resultado = numero1 == numero2;
+print(numero1, ' = ', numero2, '?', resultado);
+
+resultado = numero1 != numero2;
+print(numero1, ' != ', numero2, '?', resultado);
+
+resultado = numero1 > numero2;
+print(numero1, ' > ', numero2, '?', resultado);
+
+resultado = numero1 < numero2;
+print(numero1, ' < ', numero2, '?', resultado);
+
+resultado = numero1 >= numero2;
+print(numero1, ' >= ', numero2, '?', resultado);
+
+resultado = numero1 <= numero2;
+print(numero1, ' <= ', numero2, '?', resultado);
+
+//--------------------
+
+var a1 = true && true; // t && t retorna true
+print(a1);
+var a2 = true && false; // t && f retorna false
+print(a2);
+var a3 = false && true; // f && t retorna false
+print(a3);
+var a4 = false && 3 == 4; // t && f retorna false
+print(a4);
+var a5 = "Gato" && "Cão"; // t && t retorna Cão
+print(a5);
+var a6 = false && "Gato"; // f e t retorna false
+print(a6);
+var a7 = "Gato" && false; // t && f retorna false
+print(a7);
