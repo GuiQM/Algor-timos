@@ -36,3 +36,16 @@ var a6 = false && "Gato"; // f e t retorna false
 print(a6);
 var a7 = "Gato" && false; // t && f retorna false
 print(a7);
+
+//-------------------------
+
+var idade = 20;
+var status = idade >=18?"adulto":"menor de idade";
+print(status)
+
+//--------------------------
+
+var palavra1 = "Eleva";
+var palavra2 = "dor";
+var resultado = palavra1+palavra2
+print(resultado)
