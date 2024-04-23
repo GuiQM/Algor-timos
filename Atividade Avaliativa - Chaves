@@ -1,0 +1,101 @@
+const rd = require('readline-sync')
+
+//Array dos moradores
+let bancoDeDados = []
+let listaDeObjetos = [] // Guardará os objetos roubados
+let addObj
+function addObjetos()
+{
+    addObj = rd.question("Adicione um objeto: ")
+    listaDeObjetos.push(addObj) //Adiciona um objeto roubado no final da array "addObj"
+}
+
+let ladraoVila
+let aleatorio
+function ladraoRandom()
+{
+    aleatorio = Math.floor(Math.random() * (bancoDeDados.length)) //Escolha aleatória do ladrão
+
+    ladraoVila = bancoDeDados[aleatorio]
+    while(ladraoVila > bancoDeDados.length - 1)
+{
+    ladraoVila = ladraoVila - 1
+}
+   return ladraoVila.nome
+}
+
+
+function adcionarPersonagem(){
+    
+   
+    moradorNome = rd.question("Qual o nome do morador? ")
+    moradorNome.toLowerCase()  
+   
+
+let moradorIdade = rd.question("Qual a idade do morador? ")
+moradorIdade.toLowerCase()  
+
+
+let moradorAltura = rd.question("Qual a altura do morador? ")
+moradorAltura.toLowerCase()  
+ 
+
+let moradorCorFav = rd.question("Qual a cor favorita do morador? ")
+moradorCorFav.toLowerCase()  
+ 
+
+    let moradorPeso = rd.question("Qual o peso do morador? ")
+moradorPeso.toLowerCase()  
+bancoDeDados.push({
+    nome: moradorNome,
+    idade: moradorIdade,
+    corFav: moradorCorFav,
+    altura: moradorAltura,
+    peso: moradorPeso
+})
+}
+
+//Menu
+function exibirMenu(){
+    console.log("BEM VINDO AO MENU! Escolha: \n Precione 1 para investigar o ladrão. \n  Precione 2 para cadastrar um novo morador.  \n precione 3 para ver todos os moradores da vila.  \n Precione 4 para adicionar objeto roubado. \n  precione 5 para visualizar a lista de objetos roubados.  \n precione 6 para sair.")
+}
+function ProcessarEscolha(opcao)
+{
+switch (opcao){
+    case "1":
+        if(bancoDeDados.length == 0){console.log("Não há nenhum suspeito.")}else{
+        console.log("O ladrão é: ", ladraoRandom(), " e roubou: ", listaDeObjetos)}
+        break;
+    case "2":
+        adcionarPersonagem()
+        break;
+    case "3":
+        console.log(bancoDeDados)
+        break;
+    case "4":
+        addObjetos()
+        break;
+    case "5":
+        console.log(listaDeObjetos)
+        break;
+    case "6":
+        console.log("Encerrando...")
+        return true
+        break;
+ default:
+        console.log("Não reconhecido, tente novamente.")
+        return false
+        
+}
+}
+
+function main()
+{
+    let encerrar = false
+    while(!encerrar)
+    {exibirMenu()
+     let opcao = rd.question ('Digite o numero da opcao desejada: ')
+      encerrar = ProcessarEscolha(opcao)
+    }
+}
+main()
